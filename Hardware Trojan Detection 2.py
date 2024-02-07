@@ -7,19 +7,16 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib as mpl
-from mpl_toolkits.mplot3d import Axes3D
 import seaborn as sns
-import jinja2
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import confusion_matrix,precision_score,recall_score
+from sklearn.metrics import confusion_matrix,recall_score
 
 
 # In[456]:
 
 
-df_train=pd.read_csv("Data.csv")
+df_train=pd.read_csv("HEROdata2.csv")
 
 
 # In[457]:
@@ -288,8 +285,6 @@ pc = parallel_coordinates(final_df, 'Label', color=('#FFE888', '#FF9999'))
 # In[486]:
 
 
-from keras.wrappers.scikit_learn import KerasClassifier
-from keras.utils import np_utils
 
 
 # In[487]:
@@ -311,7 +306,7 @@ X_train,X_test,Y_train,Y_test = train_test_split(x_res,y_res,test_size=0.2,rando
 
 
 from keras.models import Sequential
-from keras.layers import Dense, Dropout
+from keras.layers import Dense
 from keras.callbacks import EarlyStopping
 
 
@@ -630,7 +625,7 @@ param_grid = {
 
 
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import GridSearchCV,RandomizedSearchCV
+from sklearn.model_selection import GridSearchCV
 
 
 # In[523]:
@@ -1473,7 +1468,7 @@ confusion_matrix(y5,y_pred)
 # In[633]:
 
 
-pip install Pypeteer
+# pip install Pypeteer
 
 
 # In[ ]:
